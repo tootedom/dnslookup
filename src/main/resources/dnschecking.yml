@@ -1,0 +1,13 @@
+httpClient:
+  timeout: 500ms
+  connectionTimeout: 500ms
+  timeToLive: 30s
+  cookiesEnabled: false
+  maxConnections: 10
+  maxConnectionsPerRoute: 10
+  #This has Nothing to do with how long a connection is kept
+  #alive in the connection pool, but is about how long a connection
+  #can be idle. i.e. time the connection has had no requestss
+  keepAlive: 120000ms
+  retries: 0
+  userAgent: <application name> (<client name>)

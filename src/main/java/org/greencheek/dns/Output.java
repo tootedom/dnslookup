@@ -43,6 +43,8 @@ public class Output {
     private static final int nttl = Integer.getInteger("nttl",10);
 
     static {
+        System.setProperty("sun.net.inetaddr.ttl",""+pttl);
+        System.setProperty("sun.net.inetaddr.negative.ttl",""+nttl);
         java.security.Security.setProperty("networkaddress.cache.ttl", ""+pttl);
         java.security.Security.setProperty("networkaddress.cache.negative.ttl",""+nttl);
     }
